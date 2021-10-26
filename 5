@@ -1,0 +1,15 @@
+'''В массиве целых чисел с количеством элементов 19 определить максимальное
+число и заменить им все четные по значению элементы'''
+
+index=0
+
+
+massiv=list(int(input("Введите элемент массива пожалуйста ")) for x in range(19))
+print("Ваш массив",massiv)
+max=max(massiv)
+print("Ваш максимум в массиве",max)
+while index<len(massiv):
+    if massiv[index]%2==0 and massiv[index]!=0:
+        massiv[index]=max
+    index+=1
+print("ваш новый массив",massiv)

@@ -1,0 +1,12 @@
+'''Дано число. Найти сумму и произведение его цифр'''
+n=str(input())
+index=0
+sum=0
+multiplication=1
+while index<len(n):
+    sum+=int(n[index])
+    multiplication*=int(n[index])
+    index+=1
+print('сумма цифр числа:',sum)
+print('произведение цифр числа:',multiplication)
+

@@ -1,0 +1,26 @@
+'''Дана целочисленная квадратная матрица. 
+Найти в каждой строке наибольший элемент и поменять его местами с элементом главной диагонали'''
+from random import randint
+indexx=0
+maxlist=[]
+diagonal=[]
+n=int(input())
+matrix=[[randint(0,20)  for x in range (n)] for y in range(n)]
+print("ваша старая матрица ",matrix)
+for y in matrix:
+     maxlist.append(max(y))
+print("Лист максимумов ",maxlist)
+for y in matrix:
+    for x in matrix:
+       if indexx in range (len(matrix)):
+           diagonal.append(x[indexx])
+       indexx+=1
+print("Диагональ ",diagonal)
+indexx=0
+for y in matrix:
+    for x in matrix:
+       if indexx in range (len(matrix)):
+          x[indexx]=maxlist[indexx]
+       indexx+=1
+
+print("ваша новая матрица ",matrix)

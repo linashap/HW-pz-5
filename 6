@@ -1,0 +1,23 @@
+''' Задан целоxисленный массив. Определить колиxество уxастков массива,
+на котором элементы монотонно возрастают (каждое следующее xисло
+больше предыдущего)'''
+
+
+
+print("Перюд монотонности это 3 числа и больше")
+
+
+n=int(input("Введите размерность массива "))
+massiv = [int(input("введите элемент массива ")) for x in range(n)]
+print(massiv)
+kolmonot=0
+count=0
+for x in range(len(massiv)-2):
+    if massiv[x+2] > massiv[x+1] > massiv[x]:
+        count+=1
+    elif count>=1 and massiv[x+1] > massiv[x+2]:
+        kolmonot+=1
+        count=0 
+if massiv[-1] > massiv[-2] > massiv[-3]:
+    kolmonot+=1
+print(kolmonot)
